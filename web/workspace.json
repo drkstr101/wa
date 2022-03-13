@@ -3,6 +3,12 @@
   "projects": {
     "assets": "libs/assets",
     "home": "apps/home",
-    "screenplay": "apps/screenplay"
+    "screenplay": "apps/screenplay",
+    "ui-atoms": "libs/ui/atoms",
+    "ui-icons": "libs/ui/icons",
+    "ui-layout": "libs/ui/layout",
+    "ui-molecules": "libs/ui/molecules",
+    "ui-organisms": "libs/ui/organisms",
+    "ui-utils": "libs/ui/utils"
   }
 }

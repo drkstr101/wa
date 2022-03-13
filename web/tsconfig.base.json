@@ -15,7 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@watheia/assets": ["libs/assets/src/index.ts"]
+      "@watheia/assets.images/*": ["libs/assets/src/images/*"],
+      "@watheia/assets.styles/*": ["libs/assets/src/styles/*"],
+      "@watheia/ui.icons": ["libs/ui/icons/src/index.ts"],
+      "@watheia/ui.organisms": ["libs/ui/organisms/src/index.ts"],
+      "@watheia/ui.utils": ["libs/ui/utils/src/index.ts"],
+      "@waweb/ui.atoms": ["libs/ui/atoms/src/index.ts"],
+      "@waweb/ui.layout": ["libs/ui/layout/src/index.ts"],
+      "@waweb/ui.molecules": ["libs/ui/molecules/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

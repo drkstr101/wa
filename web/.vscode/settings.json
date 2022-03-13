@@ -1,7 +1,10 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
+    "clsx",
+    "daisyui",
     "depcruise",
-    "preact"
+    "preact",
+    "waweb"
   ]
 }

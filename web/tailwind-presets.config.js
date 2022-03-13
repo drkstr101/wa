@@ -8,26 +8,35 @@ module.exports = {
       typography: {},
       colors: {},
       spacing: {},
-      fontFamily: {},
-    },
+      fontFamily: {}
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   // daisyUI config (optional)
   daisyui: {
     styled: true,
-    // themes: ['light', 'dark', 'business', 'luxury'],
+    themes: [
+      {
+        light: {
+          ...require('daisyui/src/colors/themes')['[data-theme=corporate]'],
+          accent: '#04BFBF'
+        },
+        dark: {
+          ...require('daisyui/src/colors/themes')['[data-theme=business]'],
+          accent: '#04BFBF'
+        }
+      }
+    ],
     base: true,
     utils: true,
     logs: true,
-    rtl: false,
-    // prefix: 'wa',
-    darkTheme: 'business',
+    rtl: false
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('daisyui'),
-  ],
+    require('daisyui')
+  ]
 };
