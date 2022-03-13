@@ -24,8 +24,6 @@ before_script:
 
 build:
   stage: build
-  before_script: 
-    - "apk add --update docker openr"
   script: ./gradlew --build-cache assemble
   cache:
     key: "$CI_COMMIT_REF_NAME"
