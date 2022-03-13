@@ -31,8 +31,8 @@ lint:
 test:
 	nx run-many --all --target test
 
-build: dato-export
-	nx run-many --all --target build
+build:
+	nx build home --prod --verbose
 
 docs:
 	depcruise . \
