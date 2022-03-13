@@ -1,2 +1,5 @@
 # wa
-Nx workspace
+
+## web
+
+![alt](./docs/web/depgraph.svg)

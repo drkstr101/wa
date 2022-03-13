@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "assets": "libs/assets",
+    "home": "apps/home",
+    "screenplay": "apps/screenplay"
+  }
+}
