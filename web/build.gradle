@@ -1,0 +1,20 @@
+plugins {
+  id 'wa.node-conventions'
+}
+
+task nxReset(type: YarnTask) {
+	// add the express package only
+	args = ['nx', 'reset']
+	dependsOn yarn
+}
+  
+task nxBuild(type: YarnTask) {
+  // add the express package only
+  args = ['nx', 'run-many', '--all', '--target=build']
+  dependsOn yarn, nxReset
+  mustRunAfter clean
+}
+
+assemble {
+	dependsOn nxBuild
+}

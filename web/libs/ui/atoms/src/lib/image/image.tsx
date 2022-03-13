@@ -1,3 +1,4 @@
 import Image, { ImageProps } from 'next/image';
-export { Image, ImageProps };
+export type { ImageProps } from 'next/image'
+export { Image };
 export default Image;
