@@ -1,5 +1,6 @@
 import analyzer from '@next/bundle-analyzer';
 import withNx, { WithNxOptions } from '@nrwl/next/plugins/with-nx';
+import { merge } from 'lodash';
 import withPreact from 'next-plugin-preact';
 import withPWA from 'next-pwa';
 import transpiler from 'next-transpile-modules';
@@ -83,18 +84,29 @@ export const defaultConfig: WithNxOptions = {
       'localhost' // For Strapi
     ],
     imageSizes: [24, 64, 300]
+  },
+  pwa: {
+    disable: process.env['NODE_ENV'] === 'development',
+    sw: `sw.js`,
+    cacheOnFrontEndNav: true // warning: may cause additional network request
   }
 };
 
+/**
+ * Merges the provided config with the default then composes the required plugins
+ *
+ * @param config
+ * @returns
+ */
 export function withConfig(config: WithNxOptions): WithNxOptions {
-  const mergedConfig = {
-    ...defaultConfig,
-    ...config
-  };
+  const mergedConfig = merge(config, defaultConfig);
 
+  // note: withTM didn't seem to work with `next-compose-plugins`,
+  //       so we must compose them manually here using withTM as
+  //       the outermost call
   return withTM(
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    withPWA(withBundleAnalyzer(withPreact(withNx(mergedConfig))), pwaConfig)
+    withPWA(withBundleAnalyzer(withPreact(withNx(mergedConfig))))
   );
 }

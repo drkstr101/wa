@@ -17,4 +17,3 @@ async function rewrites() {
   ];
 }
 module.exports = withConfig({ rewrites });
-

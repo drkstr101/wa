@@ -9,14 +9,7 @@
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/expo",
-        "outputPath": "dist/apps/expo",
-        "assets": [
-          {
-            "glob": "*.*",
-            "input": "libs/assets/src",
-            "output": "."
-          }
-        ]
+        "outputPath": "dist/apps/expo"
       },
       "configurations": {
         "production": {}
