@@ -42,7 +42,7 @@ build-home:
 	nx build home --prod --verbose
 
 build-expo:
-	nx build build-expo --prod --verbose
+	nx build expo --prod --verbose
 
 # Run all in parallel
 start:
