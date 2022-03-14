@@ -147,7 +147,8 @@ module.exports = {
           '\\.(spec|test)\\.(js|mjs|cjs|ts|tsx|ls|coffee|litcoffee|coffee\\.md)$',
           '(^|/)jest\\.(config|setup|preset)\\.(js|cjs|mjs|ts|json)$',
           '(^|/)(next|babel|webpack)\\.config\\.(js|cjs|mjs|ts|json)$',
-          '(^|/)tailwind-presets\\.config\\.js'
+          '(^|/)tailwind-presets\\.config\\.js',
+          '(^|/)tools/generators/'
         ]
       },
       to: {
@@ -205,13 +206,7 @@ module.exports = {
           leave out if you want to exclude neither (recommended!)
     */
     exclude: {
-      path: [
-        '(^|/)\\.yarn$',
-        '(^|/)\\.git$',
-        '(^|/)\\.cache$',
-        '(^|/)dist$',
-        '(^|/)coverage$'
-      ],
+      path: ['(^|/)\\.yarn$', '(^|/)\\.git$', '(^|/)\\.cache$', '(^|/)dist$', '(^|/)coverage$'],
       dynamic: true
     },
 
