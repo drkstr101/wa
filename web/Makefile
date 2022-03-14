@@ -1,9 +1,11 @@
-.PHONY: setup clean format lint test build ci dato-export docs
+.PHONY: setup clean format lint test build start ci dato-export docs
 
 SHELL := /bin/bash
 PATH := ./node_modules/.bin:$(HOME)/bin:$(PATH)
 MAKE := make
 DATO_API_TOKEN := ${DATO_API_TOKEN}
+WA_HOME_URL := ${WA_HOME_URL}
+WA_EXPO_URL := ${WA_EXPO_URL}
 
 ci:
 	$(MAKE) setup
@@ -19,7 +21,10 @@ clean:
 analyze:
 	ANALYZE=true nx build home --verbose
 
-setup:
+setup: install
+	nx build api-stackbit
+
+install:
 	yarn install
 
 format:
@@ -31,8 +36,21 @@ lint:
 test:
 	nx run-many --all --target test
 
-build:
+build: build-home
+
+build-home:
 	nx build home --prod --verbose
+
+build-expo:
+	nx build build-expo --prod --verbose
+
+# Run all in parallel
+start:
+	@echo "Starting $(HOME_URL) ..."
+	@echo "Starting $(EXPO_DESIGN_SYSTEM_URL) ..."
+	WA_HOME_URL=$(WA_HOME_URL) \
+		WA_EXPO_URL=$(WA_EXPO_URL) \
+		nx run-many --all --target serve --parallel
 
 docs:
 	depcruise . \

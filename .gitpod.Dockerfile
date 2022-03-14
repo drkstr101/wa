@@ -9,7 +9,7 @@ RUN sudo apt-get install graphviz -y
 
 # Setup zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-COPY --chown=gitpod:gitpod env/.zshrc /home/gitpod/.zshrc
+COPY --chown=33333:33333 env/.zshrc /home/gitpod/.zshrc
 
 # Install sdkman
 RUN curl -s "https://get.sdkman.io" | bash

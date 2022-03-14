@@ -6,6 +6,25 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 });
 
+const { WA_EXPO_URL } = process.env;
+
+async function rewrites() {
+  return [
+    {
+      source: '/:path*',
+      destination: `/:path*`
+    },
+    {
+      source: '/expo/design-system',
+      destination: `${WA_EXPO_URL}/expo/design-system`
+    },
+    {
+      source: '/expo/design-system/:path*',
+      destination: `${WA_EXPO_URL}/expo/design-system/:path*`
+    }
+  ];
+}
+
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
@@ -34,16 +53,12 @@ const nextConfig = {
       'localhost' // For Strapi
     ],
     imageSizes: [24, 64, 300]
-  }
+  },
+  rewrites
 };
 
 const pwaConfig = {};
 
-const plugins = [
-  [withBundleAnalyzer],
-  [withPreact],
-  [withNx],
-  [withPWA, pwaConfig]
-];
+const plugins = [[withBundleAnalyzer], [withPreact], [withNx], [withPWA, pwaConfig]];
 
 module.exports = withPlugins([...plugins], nextConfig);

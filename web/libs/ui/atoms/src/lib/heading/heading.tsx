@@ -1,11 +1,11 @@
-import styles from './heading.module.css';
+// import styles from './heading.module.css';
 
 /* eslint-disable-next-line */
 export interface HeadingProps {}
 
 export function Heading(props: HeadingProps) {
   return (
-    <div className={styles['container']}>
+    <div>
       <h1>Welcome to Heading!</h1>
     </div>
   );

@@ -3,6 +3,7 @@
   "projects": {
     "api-stackbit": "libs/api/stackbit",
     "assets": "libs/assets",
+    "expo": "apps/expo",
     "home": "apps/home",
     "model": "libs/model",
     "screenplay": "apps/screenplay",

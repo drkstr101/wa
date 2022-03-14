@@ -20,7 +20,7 @@ export function Header({ className, ...props }: HeaderProps) {
               <Link href="/home">Home</Link>
             </li>
             <li tabIndex={0}>
-              <Link href="/blog">
+              <Link href="/expo">
                 Blog
                 <ChevronDown />
               </Link>

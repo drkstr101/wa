@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn node)
+plugins=(yarn node)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,6 +101,12 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="${HOME}/bin:${PATH}"
+export WA_HOME_URL="$(/usr/bin/gp url 4200)"
+export WA_EXPO_DESIGN_SYSTEM_URL="$(/usr/bin/gp url 4210)/expo/design-system"
+
 
 alias y="yarn"
 alias x="yarn nx"
+
+# override gp "git pull" alias with `gp` builtin
+alias gp="/usr/bin/gp"

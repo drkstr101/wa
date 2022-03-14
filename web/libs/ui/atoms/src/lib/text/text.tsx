@@ -1,11 +1,11 @@
-import styles from './text.module.css';
+// import styles from './text.module.css';
 
 /* eslint-disable-next-line */
 export interface TextProps {}
 
 export function Text(props: TextProps) {
   return (
-    <div className={styles['container']}>
+    <div>
       <h1>Welcome to Text!</h1>
     </div>
   );

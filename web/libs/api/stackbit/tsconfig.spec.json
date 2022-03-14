@@ -4,14 +4,7 @@
     "outDir": "../../../dist/out-tsc",
     "module": "commonjs",
     "composite": true,
-    "types": [
-      "jest",
-      "node"
-    ]
+    "types": ["jest", "node"]
   },
-  "include": [
-    "**/*.test.ts",
-    "**/*.spec.ts",
-    "**/*.d.ts"
-  ]
+  "include": ["**/*.test.ts", "**/*.spec.ts", "**/*.d.ts"]
 }
