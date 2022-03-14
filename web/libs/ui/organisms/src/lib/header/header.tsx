@@ -1,5 +1,4 @@
-import { ChevronDown } from '@watheia/ui.icons';
-import { Link } from '@waweb/ui.atoms';
+import { Image, Link } from '@waweb/ui.atoms';
 import { HtmlHTMLAttributes } from 'react';
 
 /* eslint-disable-next-line */
@@ -11,7 +10,12 @@ export function Header({ className, ...props }: HeaderProps) {
       <div className="navbar bg-neutral text-neutral-content">
         <div className="flex-1">
           <Link href="/" className="btn btn-ghost normal-case text-xl">
-            waweb
+            <Image
+              className="w-32 py-1"
+              src="https://www.datocms-assets.com/64528/1646636345-logo.png"
+              width={640}
+              height={220}
+            />
           </Link>
         </div>
         <div className="flex-none">
@@ -20,21 +24,7 @@ export function Header({ className, ...props }: HeaderProps) {
               <Link href="/home">Home</Link>
             </li>
             <li tabIndex={0}>
-              <Link href="/expo">
-                Blog
-                <ChevronDown />
-              </Link>
-              <ul className="p-2 bg-base-100">
-                <li>
-                  <Link href="/blog/engineering">Engineering</Link>
-                </li>
-                <li>
-                  <Link href="/blog/design">Design</Link>
-                </li>
-                <li>
-                  <Link href="/blog/announcements">Announcements</Link>
-                </li>
-              </ul>
+              <Link href="/expo">Expo</Link>
             </li>
             <li>
               <Link href="/contact">Contact</Link>

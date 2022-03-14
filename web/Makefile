@@ -36,18 +36,20 @@ lint:
 test:
 	nx run-many --all --target test
 
-build: build-home
+build: build-home build-expo
 
 build-home:
-	nx build home --prod --verbose
+	WA_HOME_URL=$(WA_HOME_URL) \
+		WA_EXPO_URL=$(WA_EXPO_URL) \
+		nx build home --prod --verbose
 
 build-expo:
-	nx build expo --prod --verbose
+	WA_HOME_URL=$(WA_HOME_URL) \
+		WA_EXPO_URL=$(WA_EXPO_URL) \
+		nx build expo --prod --verbose
 
 # Run all in parallel
 start:
-	@echo "Starting $(HOME_URL) ..."
-	@echo "Starting $(EXPO_DESIGN_SYSTEM_URL) ..."
 	WA_HOME_URL=$(WA_HOME_URL) \
 		WA_EXPO_URL=$(WA_EXPO_URL) \
 		nx run-many --all --target serve --parallel

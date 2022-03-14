@@ -15,12 +15,12 @@ async function rewrites() {
       destination: `/:path*`
     },
     {
-      source: '/expo/design-system',
-      destination: `${WA_EXPO_URL}/expo/design-system`
+      source: '/expo',
+      destination: `${WA_EXPO_URL}`
     },
     {
-      source: '/expo/design-system/:path*',
-      destination: `${WA_EXPO_URL}/expo/design-system/:path*`
+      source: '/expo/:path*',
+      destination: `${WA_EXPO_URL}/:path*`
     }
   ];
 }

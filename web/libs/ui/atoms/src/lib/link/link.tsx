@@ -1,30 +1,32 @@
+import { url } from '@watheia/ui.utils';
 import clsx from 'clsx';
 import NextLink from 'next/link';
 import { HtmlHTMLAttributes } from 'react';
 
 /* eslint-disable-next-line */
 export interface LinkProps extends HtmlHTMLAttributes<HTMLAnchorElement> {
-  href: string;
+  href?: string;
 }
 
-export function Link({ children, className, href, ...props }: LinkProps) {
+export function Link({ children, className, href = '#', ...props }: LinkProps) {
   const isInternal = href.startsWith('/') || href.startsWith('#');
+  const uri = isInternal ? url(href).href : href;
 
-  const NativeLink = () => (
-    <a className={clsx('link', className)} href={href} {...props}>
+  const NativeLink = (props: LinkProps) => (
+    <a className={clsx('link link-hover hover:text-white', className)} {...props}>
       {children}
     </a>
   );
 
   if (isInternal) {
     return (
-      <NextLink href={href}>
+      <NextLink href={uri}>
         <NativeLink />
       </NextLink>
     );
   }
 
-  return <NativeLink />;
+  return <NativeLink href={uri} />;
 }
 
 export default Link;

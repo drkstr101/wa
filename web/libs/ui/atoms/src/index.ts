@@ -1,5 +1,5 @@
-export * from './lib/heading/heading';
-export * from './lib/text/text';
 export * from './lib/container/container';
-export * from './lib/image/image';
+export * from './lib/heading/heading';
+export { default as Image } from './lib/image';
 export * from './lib/link/link';
+export * from './lib/text/text';
