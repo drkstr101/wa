@@ -1,6 +1,6 @@
 type: object
-name: Button
-label: Button
+name: Action
+label: Action
 labelField: label
 fieldGroups:
   - name: styles
@@ -12,23 +12,23 @@ fields:
     name: label
     label: Label
     default: Learn more
-  - type: string
-    name: altText
+  - name: altText
+    type: string
     label: Alt text
     default: ''
     description: The alternative text for screen readers
-  - type: string
-    name: url
+  - name: url
+    type: string
     label: URL
     default: '/'
     required: true
-  - type: boolean
-    name: showIcon
+  - name: showIcon
+    type: boolean
     group: styles
     label: Show icon
     default: false
-  - type: enum
-    name: icon
+  - name: icon
+    type: enum
     group: styles
     label: Icon
     options:
@@ -75,8 +75,8 @@ fields:
       - label: YouTube
         value: youtube
     default: arrowRight
-  - type: enum
-    name: iconPosition
+  - name: iconPosition
+    type: enum
     group: styles
     controlType: button-group
     label: Icon position
@@ -86,8 +86,8 @@ fields:
       - label: Right
         value: right
     default: right
-  - type: enum
-    name: style
+  - name: style
+    type: enum
     group: styles
     controlType: button-group
     label: Style
@@ -96,9 +96,11 @@ fields:
         value: primary
       - label: Secondary
         value: secondary
-    default: secondary
-  - type: string
-    name: elementId
+      - label: Link
+        value: link
+    default: link
+  - name: elementId
+    type: string
     group: settings
     label: Element ID
     description: The unique ID for an HTML element, must not contain whitespace

@@ -1,0 +1,24 @@
+name: Image
+label: Image
+labelField: alt
+fields:
+  - name: src
+    type: string
+    label: Image source
+    default: https://www.datocms-assets.com/64528/1646636848-sphere-enterprise.png
+    required: true
+  - name: alt
+    type: string
+    label: Alt text
+    required: true
+  - name: width
+    type: number
+    label: Image width
+    required: true
+  - name: height
+    type: number
+    label: Image width
+    required: true
+  - name: blurUpThumb
+    type: string
+    label: Low res thumb
