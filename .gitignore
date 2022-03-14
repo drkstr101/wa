@@ -108,7 +108,9 @@ dist
 .gradle
 
 # Ignore Gradle build output directory
+bin
 build
-/.externalToolBuilders/
-.settings/org.eclipse.buildship.core.prefs
-model/.settings/org.eclipse.buildship.core.prefs
+.externalToolBuilders/
+.settings/
+.project
+.classpath
