@@ -6,6 +6,7 @@
     "expo": "apps/expo",
     "home": "apps/home",
     "model": "libs/model",
+    "next-utils": "libs/next-utils",
     "screenplay": "apps/screenplay",
     "ui-atoms": "libs/ui/atoms",
     "ui-icons": "libs/ui/icons",

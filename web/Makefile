@@ -21,8 +21,16 @@ clean:
 analyze:
 	ANALYZE=true nx build home --verbose
 
+# Install a few libs into node modules so the can be found
+# using standard nodejs require
 setup: install
-	nx build api-stackbit
+
+setup-utils:
+	nx run-many --projects=api-stackbit,next-utils --target build
+	rm -rf node_modules/@watheia
+	mkdir node_modules/@watheia
+	cp -r dist/libs/next-utils node_modules/@watheia/next-utils
+	cp -r dist/libs/api/stackbit node_modules/@watheia/api.stackbit
 
 install:
 	yarn install
@@ -38,12 +46,12 @@ test:
 
 build: build-home build-expo
 
-build-home:
+build-home: setup-utils
 	WA_HOME_URL=$(WA_HOME_URL) \
 		WA_EXPO_URL=$(WA_EXPO_URL) \
 		nx build home --prod --verbose
 
-build-expo:
+build-expo: setup-utils
 	WA_HOME_URL=$(WA_HOME_URL) \
 		WA_EXPO_URL=$(WA_EXPO_URL) \
 		nx build expo --prod --verbose
