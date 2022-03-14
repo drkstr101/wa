@@ -1,8 +1,4 @@
 import '@watheia/assets.styles/index.css';
-import { AppProps } from 'next/app';
+import { WaNextApp } from '@watheia/ui.organisms';
 
-function CustomApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-
-export default CustomApp;
+export default WaNextApp;
