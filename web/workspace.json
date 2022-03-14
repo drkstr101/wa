@@ -1,8 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "api-stackbit": "libs/api/stackbit",
     "assets": "libs/assets",
     "home": "apps/home",
+    "model": "libs/model",
     "screenplay": "apps/screenplay",
     "ui-atoms": "libs/ui/atoms",
     "ui-icons": "libs/ui/icons",

@@ -42,4 +42,7 @@ docs:
 	cat ../docs/web/depgraph.dot | dot -T svg > ../docs/web/depgraph.svg.tmp
 	mv ../docs/web/depgraph.svg.tmp ../docs/web/depgraph.svg
 
+dato-media:
+	nx workspace-generator dato-media $(DATO_API_TOKEN)
+
 

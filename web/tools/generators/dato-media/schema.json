@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "dato-media",
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string",
+      "description": "DatoCMS api token",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": ["token"]
+}

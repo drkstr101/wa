@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@watheia/api.stackbit": ["libs/api/stackbit/src/index.ts"],
       "@watheia/assets.images/*": ["libs/assets/src/images/*"],
       "@watheia/assets.styles/*": ["libs/assets/src/styles/*"],
+      "@watheia/model": ["libs/model/src/index.ts"],
       "@watheia/ui.icons": ["libs/ui/icons/src/index.ts"],
       "@watheia/ui.organisms": ["libs/ui/organisms/src/index.ts"],
       "@watheia/ui.utils": ["libs/ui/utils/src/index.ts"],

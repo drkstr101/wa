@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-
 import HeroSection from './hero-section';
 
 describe('HeroSection', () => {
