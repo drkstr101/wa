@@ -2,25 +2,65 @@
 title: Expo
 layout: PageLayout
 sections:
-  - elementId: 'intro'
-    type: HeroSection
+  - elementId: ''
     colors: neutral
-    title: Expo
-    subtitle: Tech demos & design compositions
+    title: We’re growing fast
+    subtitle: You should join us.
     media:
       type: ImageBlock
-      image:
-        type: Image
-        src: /images/adobestock_434934439.jpeg
-        alt: Hero section image
-  - elementId: 'quote'
-    type: QuoteSection
+      url: /images/AdobeStock_434934439.jpeg
+      altText: Hero section image
+    styles:
+      self:
+        height: auto
+        width: wide
+        margin:
+          - mt-0
+          - mb-0
+          - ml-0
+          - mr-0
+        padding:
+          - pt-36
+          - pb-12
+        alignItems: center
+        justifyContent: center
+        flexDirection: col
+      title:
+        textAlign: center
+      subtitle:
+        textAlign: center
+      text:
+        textAlign: left
+      actions:
+        justifyContent: flex-start
+    type: HeroSection
+  - elementId: ''
     colors: neutral
     quote: >-
       ## Being part of this team has been incredible. We’ve fill each other’s
       gaps, and we go to lunch together
     name: Carla Rogers
     title: Someone from the team
+    styles:
+      self:
+        height: auto
+        width: wide
+        margin:
+          - mt-0
+          - mb-0
+          - ml-0
+          - mr-0
+        padding:
+          - pt-24
+          - pb-36
+        justifyContent: center
+      quote:
+        textAlign: center
+      name:
+        textAlign: center
+      title:
+        textAlign: center
+    type: QuoteSection
   - elementId: ''
     colors: neutral
     images:
@@ -160,7 +200,7 @@ sections:
         textAlign: center
     type: ProjectsSection
   - elementId: contact-form
-    colors: colors-f
+    colors: primary
     backgroundSize: inset
     title: Not seeing the right role? Contact us
     text: >-

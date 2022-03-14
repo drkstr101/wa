@@ -1,0 +1,37 @@
+type: object
+name: Section
+label: Section
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - type: enum
+    name: colors
+    label: Colors
+    description: The color theme of the section
+    group: styles
+    controlType: palette
+    options:
+      - label: Primary
+        value: primary
+      - label: Secondary
+        value: secondary
+      - label: Accent
+        value: accent
+      - label: Neutral
+        value: neutral
+      - label: Base 1
+        value: base-100
+      - label: Base 2
+        value: base-200
+      - label: Base 3
+        value: base-300
+    default: neutral
+  - type: string
+    name: elementId
+    group: settings
+    label: Element ID
+    description: The unique ID for an HTML element, must not contain whitespace
+    default: ''

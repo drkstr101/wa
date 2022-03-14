@@ -3,7 +3,7 @@ title: Contact
 layout: PageLayout
 sections:
   - elementId: ''
-    colors: colors-a
+    colors: neutral
     backgroundSize: full
     title: Get Support
     text: |
@@ -66,7 +66,7 @@ sections:
         textAlign: left
     type: ContactSection
   - type: ContactSection
-    colors: colors-f
+    colors: neutral
     backgroundSize: inset
     title: Get early access
     text: >

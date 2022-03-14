@@ -7,7 +7,7 @@ metaTags: []
 title: Terms & Conditions
 sections:
   - type: TextSection
-    colors: colors-a
+    colors: neutral
     title: Terms & Conditions
     styles:
       self:

@@ -4,7 +4,7 @@ layout: PageLayout
 sections:
   - type: HeroSection
     elementId: homepage-hero-1
-    colors: colors-c
+    colors: neutral
     title: Watheia Labs
     subtitle: A capabilities test of the modern web
     actions:
@@ -49,7 +49,7 @@ sections:
       actions:
         justifyContent: flex-start
   - elementId: ''
-    colors: colors-f
+    colors: neutral
     backgroundSize: inset
     title: What is this?
     text: >
@@ -103,7 +103,7 @@ sections:
         self:
           opacity: 100
       type: ImageBlock
-  - colors: colors-a
+  - colors: neutral
     elementId: featured
     title: The modern web
     subtitle: This experiment focuses on a few primary research areas
@@ -370,7 +370,7 @@ sections:
     showAuthor: true
     showExcerpt: true
     subtitle: 'Musings on technology, design, business & more'
-  - colors: colors-f
+  - colors: neutral
     elementId: ''
     title: Need Support?
     items:
@@ -444,7 +444,7 @@ sections:
       right time. We got you covered.
 
   - type: ContactSection
-    colors: colors-c
+    colors: neutral
     backgroundSize: inset
     title: Watheia Realtime
     text: >
