@@ -7,7 +7,6 @@
     "expo": "apps/expo",
     "home": "apps/home",
     "icons": "libs/icons",
-    "layout": "libs/layout",
     "model": "libs/model",
     "next-app": "libs/next/app",
     "next-utils": "libs/next/utils",

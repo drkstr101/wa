@@ -16,7 +16,6 @@
   ```
 */
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import { PageLayout } from '@watheia/layout';
 
 const HeroSection = () => (
   <div className="relative overflow-hidden">
@@ -96,8 +95,8 @@ const HeroSection = () => (
 
 export default function IndexPage() {
   return (
-    <PageLayout>
+    <main>
       <HeroSection />
-    </PageLayout>
+    </main>
   );
 }

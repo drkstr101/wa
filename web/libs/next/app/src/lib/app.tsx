@@ -4,6 +4,7 @@ import { theme } from '@react-spectrum/theme-default';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import TopLayout from './layout';
 
 function WaNextApp({ Component, pageProps }: AppProps) {
   // keep color scheme in sync with tailwindcss
@@ -24,7 +25,9 @@ function WaNextApp({ Component, pageProps }: AppProps) {
       </Head>
       <SSRProvider>
         <Provider theme={theme} colorScheme={colorScheme} minHeight="100%">
-          <Component {...pageProps} />
+          <TopLayout>
+            <Component {...pageProps} />
+          </TopLayout>
         </Provider>
       </SSRProvider>
     </>
