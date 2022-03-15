@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-import { WaNextDocument } from '@watheia/ui.organisms';
+import { WaNextDocument } from '@watheia/next.app';
 
 export default WaNextDocument;

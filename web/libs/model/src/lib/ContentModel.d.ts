@@ -6,6 +6,7 @@ export interface ContentModel extends Model {
     | 'main'
     | 'title'
     | 'content'
+    | 'text'
     | 'subtitle'
     | 'media'
     | 'actions'

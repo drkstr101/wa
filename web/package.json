@@ -10,7 +10,6 @@
   },
   "private": true,
   "dependencies": {
-    "-": "^0.0.1",
     "@adobe/react-spectrum": "^3.16.4",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",

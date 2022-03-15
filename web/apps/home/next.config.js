@@ -1,4 +1,4 @@
-const { withConfig, WA_EXPO_URL } = require('@watheia/next-utils');
+const { withConfig, WA_EXPO_URL } = require('@watheia/next.utils');
 
 async function rewrites() {
   return [

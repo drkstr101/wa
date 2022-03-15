@@ -5,13 +5,6 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"-@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "-@npm:0.0.1"
-  checksum: 33786d96a8c404f3ce4db242b50d9a8f6013b3a0673bba52186b92f016429135ec2d9b9f77abf85c2a2b757c85e9b33a1f44d5dbf9740fd6294de87198681fd6
-  languageName: node
-  linkType: hard
-
 "@adobe/react-spectrum-ui@npm:^1.1.0":
   version: 1.1.0
   resolution: "@adobe/react-spectrum-ui@npm:1.1.0"
@@ -8511,17 +8504,17 @@ __metadata:
   linkType: hard
 
 "browserslist@npm:^4.0.0, browserslist@npm:^4.14.5, browserslist@npm:^4.16.6, browserslist@npm:^4.17.5, browserslist@npm:^4.19.1, browserslist@npm:^4.19.3":
-  version: 4.20.0
-  resolution: "browserslist@npm:4.20.0"
+  version: 4.20.2
+  resolution: "browserslist@npm:4.20.2"
   dependencies:
-    caniuse-lite: ^1.0.30001313
-    electron-to-chromium: ^1.4.76
+    caniuse-lite: ^1.0.30001317
+    electron-to-chromium: ^1.4.84
     escalade: ^3.1.1
     node-releases: ^2.0.2
     picocolors: ^1.0.0
   bin:
     browserslist: cli.js
-  checksum: 6d77f54bd43e7e1b86c3f10a3aa84b6c198f2ecc8b345ebd42cb9feb1c143554ad62a0eaf1365f28d14589a4d1fb12b367ade3798fa493dab5cff4ca525384aa
+  checksum: 18e09beeae32e69fea45fc3642240fb63027b1460d90e24da86377177dca3d82c80f8fa44469d95109e3962f08eb2a23e03037bd5e1f1ec38e4866e2a8572435
   languageName: node
   linkType: hard
 
@@ -8720,10 +8713,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001251, caniuse-lite@npm:^1.0.30001283, caniuse-lite@npm:^1.0.30001297, caniuse-lite@npm:^1.0.30001313":
-  version: 1.0.30001316
-  resolution: "caniuse-lite@npm:1.0.30001316"
-  checksum: 8a96ee89f5e64f42f684475905c73c67f995abd6d9b111ab8a9d2e0a5d3b871f1a600ff42e4ffe7f7f3498d0243beeafc11cf7b4dbe3e022a2e5cdf639564152
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001251, caniuse-lite@npm:^1.0.30001283, caniuse-lite@npm:^1.0.30001297, caniuse-lite@npm:^1.0.30001317":
+  version: 1.0.30001317
+  resolution: "caniuse-lite@npm:1.0.30001317"
+  checksum: 0a5fc7fb8c54dde515c2d468e5fc9e0cf2e82dd40d596cdffed90f64c50b5dadd0ab0c25e04769d86488b3115f949abd31d54d1f74d0029b45fa8206a031f47a
   languageName: node
   linkType: hard
 
@@ -9883,9 +9876,9 @@ __metadata:
   linkType: hard
 
 "cssdb@npm:^6.4.0":
-  version: 6.4.1
-  resolution: "cssdb@npm:6.4.1"
-  checksum: cce99deb04b1fccff36fe33529cb318cdb4b7b0064396f2d26dd0b118137ea413602e3ca2977eda184e6769ef98d37e23cdcfd4f54c18daa17179906b168ae58
+  version: 6.5.0
+  resolution: "cssdb@npm:6.5.0"
+  checksum: badd8cfc6d827cf08c8442ccbf733af1cd79b1df751c7f7d9a22207d235e928a612751c1025485f4bd5c77d420e0ed2d35c6184a4c5d195671b2e4d56f255b64
   languageName: node
   linkType: hard
 
@@ -10800,10 +10793,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.4.76":
-  version: 1.4.83
-  resolution: "electron-to-chromium@npm:1.4.83"
-  checksum: fab4c992f190fc54d8eb029c8e2161e57a9d61bf6e0d2cbc34b65c1f0f9e890e235b2cb7d43810b5206a0cd5f5460ec7da4ccc7afe5cff58a7d4bae59ab08dcf
+"electron-to-chromium@npm:^1.4.84":
+  version: 1.4.84
+  resolution: "electron-to-chromium@npm:1.4.84"
+  checksum: f38c3694465705f698094f3228c81237d00da9baba627a4b258195a2c136f30f1204cb4a651f870e05aeed71e0f77069c124554b2ee15372e06c275e0b24978d
   languageName: node
   linkType: hard
 
@@ -12496,11 +12489,11 @@ __metadata:
   linkType: hard
 
 "globals@npm:^13.6.0, globals@npm:^13.9.0":
-  version: 13.12.1
-  resolution: "globals@npm:13.12.1"
+  version: 13.13.0
+  resolution: "globals@npm:13.13.0"
   dependencies:
     type-fest: ^0.20.2
-  checksum: cf7877629c8f2a293b0a7d09d1dcce7f2d426ec2528600c481c5b3f3d070b0a120eb2499439ac0404990fb8a5742c0165b1bf1f52603364001ddc89bea3dda24
+  checksum: c55ea8fd3afecb72567bac41605577e19e68476993dfb0ca4c49b86075af5f0ae3f0f5502525f69010f7c5ea5db6a1c540a80a4f80ebdfb2f686d87b0f05d7e9
   languageName: node
   linkType: hard
 
@@ -17669,13 +17662,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8.2.13, postcss@npm:^8.3.5, postcss@npm:^8.4.6, postcss@npm:^8.4.7, postcss@npm:^8.4.8":
-  version: 8.4.8
-  resolution: "postcss@npm:8.4.8"
+  version: 8.4.10
+  resolution: "postcss@npm:8.4.10"
   dependencies:
     nanoid: ^3.3.1
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 8e42def1ea98a4ac800d2b8937b19c83c6722da6c39ded72b1877eb743922f51b6e93be3667284b685ac18e8b583f21d97f24e0a73161c70fe8dc6901e614b87
+  checksum: e5945aab5ce000e7105affb6cb9e0dc88aea23fbfbcf6ab63d0934c28f805ddb87e3ae53ba86e79acbff59c04490e3e55e1cf5f64faf184b2ef180d7893277fd
   languageName: node
   linkType: hard
 
@@ -21146,7 +21139,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "v0alpha1@workspace:."
   dependencies:
-    "-": ^0.0.1
     "@adobe/react-spectrum": ^3.16.4
     "@babel/core": ^7.17.7
     "@babel/preset-env": ^7.16.11

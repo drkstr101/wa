@@ -1,3 +1,3 @@
-const { withConfig } = require('@watheia/next-utils');
+const { withConfig } = require('@watheia/next.utils');
 
 module.exports = withConfig({ basePath: '/expo' });

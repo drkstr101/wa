@@ -38,7 +38,7 @@ import {
   Well
 } from '@adobe/react-spectrum';
 import NotFound from '@spectrum-icons/illustrations/NotFound';
-import { PageLayout } from '@waweb/ui.layout';
+import { PageLayout } from '@watheia/layout';
 import { ReactNode } from 'react';
 
 const sections = [

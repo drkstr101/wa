@@ -29,7 +29,7 @@ setup-utils:
 	nx run-many --projects=api-stackbit,next-utils --target build
 	rm -rf node_modules/@watheia
 	mkdir node_modules/@watheia
-	cp -r dist/libs/next-utils node_modules/@watheia/next-utils
+	cp -r dist/libs/next/utils node_modules/@watheia/next.utils
 	cp -r dist/libs/api/stackbit node_modules/@watheia/api.stackbit
 
 install:

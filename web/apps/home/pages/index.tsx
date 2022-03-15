@@ -15,119 +15,78 @@
   }
   ```
 */
-import { CameraIcon } from '@heroicons/react/solid';
-import { HeroSection } from '@watheia/ui.organisms';
-import { PageLayout } from '@waweb/ui.layout';
+import { ChevronRightIcon } from '@heroicons/react/solid';
+import { PageLayout } from '@watheia/layout';
 
-const CaseStudySection = () => (
-  <div className="overflow-hidden">
-    <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-      <div className="hidden lg:block bg-neutral absolute top-0 bottom-0 left-3/4 w-screen" />
-      <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
-        <div>
-          <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
-            Case Study
-          </h2>
-          <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
-            Watheia Labs
-          </h3>
-        </div>
-      </div>
-      <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
-        <div className="relative lg:row-start-1 lg:col-start-2">
-          <svg
-            className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="de316486-4a29-4312-bdfc-fbce2132a2c1"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
+const HeroSection = () => (
+  <div className="relative overflow-hidden">
+    <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+      <div className="mx-auto max-w-7xl lg:px-8">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+          <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+            <div className="lg:py-24">
+              <a
+                href="#"
+                className="inline-flex items-center text-white bg-base-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-neutral-content"
               >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-neutral-content"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect width={404} height={384} fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)" />
-          </svg>
-          <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
-            <figure>
-              <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                <img
-                  className="rounded-lg shadow-lg object-cover object-center"
-                  src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80"
-                  alt="Whitney leaning against a railing on a downtown street"
-                  width={1184}
-                  height={1376}
-                />
+                <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-accent rounded-full">
+                  We&apos;re hiring
+                </span>
+                <span className="ml-4 text-sm">Visit our careers page</span>
+                <ChevronRightIcon className="ml-2 w-5 h-5 text-primary" aria-hidden="true" />
+              </a>
+              <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                <span className="block">A better way to</span>
+                <span className="block text-accent">ship web apps</span>
+              </h1>
+              <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat
+                commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+              </p>
+              <div className="mt-10 sm:mt-12">
+                <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                  <div className="sm:flex">
+                    <div className="min-w-0 flex-1">
+                      <label htmlFor="email" className="sr-only">
+                        Email address
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-300 focus:ring-offset-gray-900"
+                      />
+                    </div>
+                    <div className="mt-3 sm:mt-0 sm:ml-3">
+                      <button
+                        type="submit"
+                        className="block w-full py-3 px-4 rounded-md shadow bg-accent text-white font-medium hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-300 focus:ring-offset-gray-900"
+                      >
+                        Start free trial
+                      </button>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                    Start your free 14-day trial, no credit card necessary. By providing your
+                    email, you agree to our{' '}
+                    <a href="#" className="font-medium text-white">
+                      terms of service
+                    </a>
+                    .
+                  </p>
+                </form>
               </div>
-              <figcaption className="mt-3 flex text-sm text-secondary">
-                <CameraIcon className="flex-none w-5 h-5" aria-hidden="true" />
-                <span className="ml-2">Photograph by Marcus O’Leary</span>
-              </figcaption>
-            </figure>
+            </div>
           </div>
-        </div>
-        <div className="mt-8 lg:mt-0">
-          <div className="max-w-prose mx-auto lg:max-w-none">
-            <p className="text-lg">
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed
-              consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu
-              morbi.
-            </p>
-          </div>
-          <div className="mt-5 prose prose-teal mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
-            <p>
-              Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem
-              nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet
-              quam urna.
-            </p>
-            <p>
-              Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique sit nisi lorem
-              pulvinar. Urna, laoreet fusce nibh leo. Dictum et et et sit. Faucibus sed non
-              gravida lectus dignissim imperdiet a.
-            </p>
-            <p>
-              Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem arcu, metus,
-              egestas netus cursus. In.
-            </p>
-            <ul role="list">
-              <li>Quis elit egestas venenatis mattis dignissim.</li>
-              <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
-              <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
-            </ul>
-            <p>
-              Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies.
-              Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum
-              consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-              fermentum lacus in. Viverra.
-            </p>
-            <h3>How we helped</h3>
-            <p>
-              Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in
-              volutpat, diam. Montes, magna cursus nulla feugiat dignissim id lobortis amet.
-              Laoreet sem est phasellus eu proin massa, lectus. Diam rutrum posuere donec
-              ultricies non morbi. Mi a platea auctor mi.
-            </p>
-            <p>
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed
-              consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu
-              morbi.
-            </p>
+          <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+              {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
+              <img
+                className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="/images/cloud-illustration-indigo-400.svg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
