@@ -10,20 +10,9 @@ export interface LogoProps extends Omit<ImageProps, 'src'> {
   alternate?: boolean;
 }
 
-const Logo = ({
-  width = 162,
-  height = 56,
-  alternate = false,
-  ...props
-}: LogoProps) => (
+const Logo = ({ width = 640, height = 220, alternate = false, ...props }: LogoProps) => (
   // eslint-disable-next-line jsx-a11y/alt-text
-  <Image
-    width={width}
-    height={height}
-    priority
-    src={alternate ? logoAlt : logo}
-    {...props}
-  />
+  <Image width={width} height={height} priority src={alternate ? logoAlt : logo} {...props} />
 );
 
 export default Logo;
