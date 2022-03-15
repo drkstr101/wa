@@ -57,7 +57,7 @@ build-expo: setup-utils
 		nx build expo --prod --verbose
 
 # Run all in parallel
-start:
+start: setup-utils
 	WA_HOME_URL=$(WA_HOME_URL) \
 		WA_EXPO_URL=$(WA_EXPO_URL) \
 		nx run-many --all --target serve --parallel
