@@ -11,6 +11,8 @@
     "next-app": "libs/next/app",
     "next-utils": "libs/next/utils",
     "screenplay": "apps/screenplay",
-    "utils": "libs/utils"
+    "utils": "libs/utils",
+    "waweb-auth": "libs/waweb/auth",
+    "waweb-message": "libs/waweb/message"
   }
 }

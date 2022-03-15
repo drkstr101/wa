@@ -1,14 +1,15 @@
-// import styles from './container.module.css';
+import clsx from 'clsx';
+import { HtmlHTMLAttributes } from 'react';
 
-/* eslint-disable-next-line */
-export interface ContainerProps {}
-
-export function Container(props: ContainerProps) {
+/* This example requires Tailwind CSS v2.0+ */
+export default function Container({
+  children,
+  className,
+  ...props
+}: HtmlHTMLAttributes<HTMLDivElement>) {
   return (
-    <div>
-      <h1>Welcome to Container!</h1>
+    <div className={clsx('max-w-7xl mx-auto sm:px-6 lg:px-8', className)} {...props}>
+      {children}
     </div>
   );
 }
-
-export default Container;

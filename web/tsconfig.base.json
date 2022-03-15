@@ -26,6 +26,8 @@
       "@watheia/next.utils": ["libs/next/utils/src/index.ts"],
       "@watheia/ui.organisms": ["libs/ui/organisms/src/index.ts"],
       "@watheia/utils": ["libs/utils/src/index.ts"],
+      "@watheia/waweb.auth": ["libs/waweb/auth/src/index.ts"],
+      "@watheia/waweb.message": ["libs/waweb/message/src/index.ts"],
       "@waweb/ui.molecules": ["libs/ui/molecules/src/index.ts"]
     }
   },
