@@ -15,10 +15,61 @@
   }
   ```
 */
-import { ChevronRightIcon } from '@heroicons/react/solid';
+import { GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/react/outline';
+import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid';
+import Image from 'next/image';
+
+const features = [
+  {
+    name: 'Competitive rates',
+    description:
+      'Consequuntur omnis dicta cumque, inventore atque ab dolores aspernatur tempora ab doloremque.',
+    icon: GlobeAltIcon
+  },
+  {
+    name: 'No hidden fees',
+    description:
+      'Corporis quisquam nostrum nulla veniam recusandae temporibus aperiam officia incidunt at distinctio ratione.',
+    icon: ScaleIcon
+  },
+  {
+    name: 'Instant transfers',
+    description:
+      'Omnis, illo delectus? Libero, possimus nulla nemo tenetur adipisci repellat dolore eligendi velit doloribus mollitia.',
+    icon: LightningBoltIcon
+  },
+  {
+    name: 'Reminder emails',
+    description:
+      'Veniam necessitatibus reiciendis fugit explicabo dolorem nihil et omnis assumenda odit? Quisquam unde accusantium.',
+    icon: MailIcon
+  }
+];
+
+const metrics = [
+  {
+    id: 1,
+    stat: '8K+',
+    emphasis: 'Companies',
+    rest: 'use laoreet amet lacus nibh integer quis.'
+  },
+  {
+    id: 2,
+    stat: '25K+',
+    emphasis: 'Countries around the globe',
+    rest: 'lacus nibh integer quis.'
+  },
+  {
+    id: 3,
+    stat: '98%',
+    emphasis: 'Customer satisfaction',
+    rest: 'laoreet amet lacus nibh integer quis.'
+  },
+  { id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.' }
+];
 
 const HeroSection = () => (
-  <div className="relative overflow-hidden">
+  <div className="relative">
     <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8">
@@ -26,7 +77,7 @@ const HeroSection = () => (
             <div className="lg:py-24">
               <a
                 href="#"
-                className="inline-flex items-center text-white bg-base-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-neutral-content"
+                className="inline-flex items-center text-base-content bg-base-300 rounded-full p-1 pr-2 sm:text-base-content lg:text-sm xl:text-base-content hover:text-neutral-content"
               >
                 <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-accent rounded-full">
                   We&apos;re hiring
@@ -93,10 +144,165 @@ const HeroSection = () => (
   </div>
 );
 
+const FeaturesSection = () => (
+  <div className="overflow-hidden">
+    <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <svg
+        className="absolute top-0 left-full transform -translate-x-1/2 -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
+        width={404}
+        height={784}
+        fill="none"
+        viewBox="0 0 404 784"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern
+            id="8b1b5f72-e944-4457-af67-0c6d15a99f38"
+            x={0}
+            y={0}
+            width={20}
+            height={20}
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              x={0}
+              y={0}
+              width={4}
+              height={4}
+              className="text-secondary"
+              fill="currentColor"
+            />
+          </pattern>
+        </defs>
+        <rect width={404} height={784} fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)" />
+      </svg>
+
+      <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <div className="lg:col-span-1">
+          <h2 className="text-3xl font-extrabold tracking-tight text-base-content-300 sm:text-4xl">
+            What even is this?
+          </h2>
+        </div>
+        <dl className="mt-10 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:mt-0 lg:col-span-2">
+          {features.map((feature) => (
+            <div key={feature.name}>
+              <dt>
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-accent text-base-content">
+                  <feature.icon className="h-6 w-6" aria-hidden="true" />
+                </div>
+                <p className="mt-5 text-lg leading-6 font-medium text-base-content-300">
+                  {feature.name}
+                </p>
+              </dt>
+              <dd className="mt-2 text-base text-base-content">{feature.description}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </div>
+);
+
+const StatsSection = () => (
+  <div className="relative overflow-hidden">
+    <div className="h-80 w-full absolute bottom-0 xl:inset-0 xl:h-full">
+      <div className="h-full w-full xl:grid xl:grid-cols-2">
+        <div className="h-full xl:relative xl:col-start-2">
+          <div className="h-full w-full opacity-25 xl:absolute xl:inset-0">
+            <Image
+              objectFit="cover"
+              src="https://www.datocms-assets.com/64528/1647396476-photo-1521737852567-6949f3f9f2b5.jpg"
+              alt="People working on laptops"
+              layout="fill"
+            />
+          </div>
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
+          />
+        </div>
+      </div>
+    </div>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+      <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
+        <h2 className="text-sm font-semibold text-accent-300 tracking-wide uppercase">
+          Valuable Metrics
+        </h2>
+        <p className="mt-3 text-3xl font-extrabold text-base-content-300">
+          Get actionable data that will help grow your business
+        </p>
+        <p className="mt-5 text-lg text-base-content">
+          Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra
+          tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et
+          vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam
+          sit tellus quis at.
+        </p>
+        <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+          {metrics.map((item) => (
+            <p key={item.id}>
+              <span className="block text-2xl font-bold text-base-content-300">
+                {item.stat}
+              </span>
+              <span className="mt-1 block text-base text-base-content-700">
+                <span className="font-medium text-base-content-300">{item.emphasis}</span>{' '}
+                {item.rest}
+              </span>
+            </p>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const CtaSection = () => (
+  <div className="relative bg-neutral">
+    <div className="h-0 bg-accent-700 md:absolute md:left-0 md:h-full md:w-1/2">
+      <img
+        className="w-full h-full object-cover"
+        src="https://www.datocms-assets.com/64528/1646636841-graphs-enterprise.svg"
+        alt=""
+      />
+    </div>
+    <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="md:ml-auto md:w-1/2 md:pl-10">
+        <h2 className="text-base font-semibold uppercase tracking-wider text-neutral-content-300">
+          Award winning support
+        </h2>
+        <p className="mt-2 text-neutral-content text-3xl font-extrabold tracking-tight sm:text-4xl">
+          We’re here to help
+        </p>
+        <p className="mt-3 text-lg text-neutral-content-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus
+          etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet
+          amet volutpat quisque ut interdum tincidunt duis.
+        </p>
+        <div className="mt-8">
+          <div className="inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-base bg-base-content hover:bg-base-content-300"
+            >
+              Contact Support
+              <ExternalLinkIcon
+                className="-mr-1 ml-3 h-5 w-5 text-primary"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 export default function IndexPage() {
   return (
     <main>
       <HeroSection />
+      <FeaturesSection />
+      <StatsSection />
+      <CtaSection />
     </main>
   );
 }
