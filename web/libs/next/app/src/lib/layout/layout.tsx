@@ -60,7 +60,7 @@ export default function Layout({
           <header className={cn(styles['header'])}>
             <div className={styles['header-logos']}>
               <MobileMenu key={router?.asPath ?? '/'} />
-              <Link href="/">
+              <Link href={url()}>
                 {/* eslint-disable-next-line */}
                 <a className={styles['logo']}>
                   <Logo />
@@ -69,7 +69,7 @@ export default function Layout({
             </div>
             <div className={styles['tabs']}>
               {config.navigation.map(({ name, route }: NavZone) => (
-                <Link key={name} href={url(route)}>
+                <Link key={name} href={url(route).href}>
                   {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a
                     className={cn(styles['tab'], {
@@ -85,7 +85,7 @@ export default function Layout({
               <div className="flex items-center ml-4 mr-16 md:ml-6">
                 <button
                   type="button"
-                  className="p-1 text-gray-400 bg-white rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                  className="p-1 text-base-300 bg-base-content rounded-full hover:text-base-700 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="w-6 h-6" aria-hidden="true" />
@@ -98,13 +98,15 @@ export default function Layout({
         )}
         <div className={styles['page']}>
           <MessageList messages={messages} />
-          <SkipNavContent />
-          <main
+          <div
             className={cn(styles['main'], usePadding && 'px-2 py-6 sm:px-6 lg:px-8')}
             style={layoutStyles}
           >
-            <div className={cn(styles['full'], className)}>{children}</div>
-          </main>
+            <div className={cn(styles['full'], className)}>
+              <SkipNavContent />
+              {children}
+            </div>
+          </div>
           <Footer />
         </div>
       </div>
