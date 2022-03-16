@@ -4,7 +4,6 @@
     "api-stackbit": "libs/api/stackbit",
     "assets": "libs/assets",
     "base-ui": "libs/base-ui",
-    "expo": "apps/expo",
     "home": "apps/home",
     "icons": "libs/icons",
     "model": "libs/model",

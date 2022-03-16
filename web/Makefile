@@ -52,7 +52,8 @@ build-home: setup-utils
 		nx build home --prod --verbose
 
 build-expo: setup-utils
-	WA_HOME_URL=$(WA_HOME_URL) \
+	@echo "noop"
+#	WA_HOME_URL=$(WA_HOME_URL) \
 		WA_EXPO_URL=$(WA_EXPO_URL) \
 		nx build expo --prod --verbose
 
