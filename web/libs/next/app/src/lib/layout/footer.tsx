@@ -21,19 +21,12 @@ import styles from './footer.module.css';
 export default function Footer() {
   return (
     <footer
-      className={cn(
-        styles['footer'],
-        'border-t border-dotted border-gray-700 bg-gray-900/75'
-      )}
+      className={cn(styles['footer'], 'border-t border-dotted border-secondary bg-base-700')}
       data-testid="waweb.layout/footer"
     >
       <div className={styles['footer-legal']}>
-        <div
-          data-testid="waweb.layout/footer:copyright"
-          className={styles['footer-copyright']}
-        >
-          Copyright © {`${new Date().getFullYear()} `} Watheia Labs, LLC. All
-          rights reserved.
+        <div data-testid="waweb.layout/footer:copyright" className={styles['footer-copyright']}>
+          Copyright © {`${new Date().getFullYear()} `} Watheia Labs, LLC. All rights reserved.
         </div>
         <div className={styles['footer-center-group']}>
           <p className={styles['footer-paragraph']}>

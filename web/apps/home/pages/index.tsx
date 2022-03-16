@@ -17,10 +17,12 @@
 */
 import { GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/react/outline';
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid';
+import { url } from '@watheia/utils';
 import clsx from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const features = [
+export const features = [
   {
     name: 'Competitive rates',
     description:
@@ -47,7 +49,7 @@ const features = [
   }
 ];
 
-const metrics = [
+export const metrics = [
   {
     id: 1,
     stat: '8K+',
@@ -69,7 +71,59 @@ const metrics = [
   { id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.' }
 ];
 
-const HeroSection = () => (
+/* This example requires Tailwind CSS v2.0+ */
+export const posts = [
+  {
+    title: 'Boost your conversion rate',
+    href: '#',
+    category: { name: 'Article', href: '#', color: 'bg-neutral text-info' },
+    description:
+      'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    author: {
+      name: 'Paul York',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+    },
+    readingTime: '6 min'
+  },
+  {
+    title: 'How to use search engine optimization to drive sales',
+    href: '#',
+    category: { name: 'Video', href: '#', color: 'bg-neutral text-error' },
+    description:
+      'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
+    date: 'Mar 10, 2020',
+    datetime: '2020-03-10',
+    author: {
+      name: 'Dessie Ryan',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+    },
+    readingTime: '4 min'
+  },
+  {
+    title: 'Improve your customer experience',
+    href: '#',
+    category: { name: 'Case Study', href: '#', color: 'bg-neutral text-success' },
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure iusto fugiat commodi sequi.',
+    date: 'Feb 12, 2020',
+    datetime: '2020-02-12',
+    author: {
+      name: 'Easer Collins',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+    },
+    readingTime: '11 min'
+  }
+];
+
+export const HeroSection = () => (
   <div className="relative">
     <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -145,7 +199,7 @@ const HeroSection = () => (
   </div>
 );
 
-const FeaturesSection = () => (
+export const FeaturesSection = () => (
   <div className="overflow-hidden">
     <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <svg
@@ -204,7 +258,7 @@ const FeaturesSection = () => (
   </div>
 );
 
-const StatsSection = () => (
+export const StatsSection = () => (
   <div className="relative overflow-hidden">
     <div className="h-80 w-full absolute bottom-0 xl:inset-0 xl:h-full">
       <div className="h-full w-full xl:grid xl:grid-cols-2">
@@ -256,7 +310,7 @@ const StatsSection = () => (
   </div>
 );
 
-const CtaSection = () => (
+export const CtaSection = () => (
   <div className="relative bg-neutral">
     <div className="h-0 bg-accent-700 md:absolute md:left-0 md:h-full md:w-1/2">
       <img
@@ -280,16 +334,15 @@ const CtaSection = () => (
         </p>
         <div className="mt-8">
           <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-base bg-base-content hover:bg-base-content-300"
-            >
-              Contact Support
-              <ExternalLinkIcon
-                className="-mr-1 ml-3 h-5 w-5 text-primary"
-                aria-hidden="true"
-              />
-            </a>
+            <Link href={url('/contact')}>
+              <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-base bg-base-content hover:bg-base-content-300">
+                Contact sales
+                <ExternalLinkIcon
+                  className="-mr-1 ml-3 h-5 w-5 text-primary"
+                  aria-hidden="true"
+                />
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -297,59 +350,7 @@ const CtaSection = () => (
   </div>
 );
 
-/* This example requires Tailwind CSS v2.0+ */
-const posts = [
-  {
-    title: 'Boost your conversion rate',
-    href: '#',
-    category: { name: 'Article', href: '#', color: 'bg-neutral text-info' },
-    description:
-      'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    author: {
-      name: 'Paul York',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-    },
-    readingTime: '6 min'
-  },
-  {
-    title: 'How to use search engine optimization to drive sales',
-    href: '#',
-    category: { name: 'Video', href: '#', color: 'bg-neutral text-error' },
-    description:
-      'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
-    date: 'Mar 10, 2020',
-    datetime: '2020-03-10',
-    author: {
-      name: 'Dessie Ryan',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-    },
-    readingTime: '4 min'
-  },
-  {
-    title: 'Improve your customer experience',
-    href: '#',
-    category: { name: 'Case Study', href: '#', color: 'bg-neutral text-success' },
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure iusto fugiat commodi sequi.',
-    date: 'Feb 12, 2020',
-    datetime: '2020-02-12',
-    author: {
-      name: 'Easer Collins',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-    },
-    readingTime: '11 min'
-  }
-];
-
-const FeaturedPostsSection = () => (
+export const FeaturedPostsSection = () => (
   <div className="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
     <div className="relative max-w-lg mx-auto divide-y-2 divide-primary-content lg:max-w-7xl">
       <div>
@@ -363,7 +364,7 @@ const FeaturedPostsSection = () => (
       </div>
       <div className="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
         {posts.map((post) => (
-          <div key={post.title} className="hover:shadow-xl rounded-xl hover:bg-neutral p-4">
+          <div key={post.title} className="hover:shadow-xl hover:bg-neutral p-4">
             <div>
               <a href={post.category.href} className="inline-block">
                 <span

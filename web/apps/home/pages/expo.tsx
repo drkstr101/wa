@@ -100,7 +100,7 @@ const GridLayout = () => (
   </Grid>
 );
 
-const MockArticle = () => (
+export const MockArticle = () => (
   <div className="relative py-16 overflow-hidden">
     <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
       <div className="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
@@ -280,7 +280,7 @@ const MockArticle = () => (
 
 export default function Home() {
   return (
-    <main className="p-4">
+    <main className="p-4 lg:p-12">
       <Heading UNSAFE_className="text-4xl text-bolder" marginBottom="size-600" level={1}>
         Design System
       </Heading>
