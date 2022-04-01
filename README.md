@@ -1,9 +1,1 @@
-# wa
-
-## Model
-
-![alt](./docs/webmodel.jpg)
-
-## Web
-
-![alt](./docs/web/depgraph.svg)
+Relocated: https://github.com/drkstr101/waweb2
